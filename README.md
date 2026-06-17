@@ -1,26 +1,38 @@
 # ☁️ Desafio DIO - Infraestrutura como Código com AWS CloudFormation
 
-Repositório criado para o desafio prático de automação de infraestrutura na AWS utilizando o **CloudFormation**, desenvolvido no bootcamp da [DIO](https://www.dio.me/).
+Repositório criado para documentar o desafio prático de automação de infraestrutura na AWS utilizando o **CloudFormation**, desenvolvido durante o bootcamp na [DIO](https://www.dio.me/).
 
 ---
 
-## 🎯 Objetivo
-O objetivo deste laboratório foi aplicar os conceitos de Cultura DevOps e Infraestrutura como Código (IaC) para criar e gerenciar recursos na AWS de forma automatizada e segura.
+## 🎯 Objetivo do Projeto
+O objetivo deste laboratório foi aplicar na prática os conceitos de Cultura DevOps e Infraestrutura como Código (IaC). Através de um template declarativo, foi possível provisionar e gerenciar recursos na AWS de forma automatizada, segura e padronizada, simulando um cenário real de engenharia de nuvem.
 
-## 🧠 Principais Aprendizados e Insights
-* **Segurança na AWS:** Aprendi que o formato padrão para configurar políticas e permissões no IAM é o **JSON** e que boas práticas exigem bloquear o acesso público de buckets S3 sensíveis.
-* **Criptografia:** Dados em repouso e em trânsito (utilizando HTTPS/TLS) devem ser protegidos para garantir a integridade das credenciais e dados dos usuários.
-* **Ferramentas DevOps:** Compreendi que o Terraform utiliza o arquivo `.tfstate` para gerenciar o estado da nuvem e que ele nunca deve ser editado manualmente. Já para implantações automatizadas na AWS, o serviço ideal é o **AWS CodeDeploy**.
-* **Cultura DevOps:** O foco principal é promover a colaboração contínua entre Desenvolvimento (Dev) e Operações (Ops) para acelerar as entregas com alta qualidade.
+---
+
+## 🛠️ Tecnologias e Conceitos Absorvidos
+
+* **AWS CloudFormation:** Serviço de IaC utilizado para modelar, criar e gerenciar recursos da AWS de forma declarativa via arquivos de configuração.
+* **Amazon S3:** Entendimento sobre a segurança e hospedagem de objetos, compreendendo que buckets nascem privados por padrão e exigem configurações explícitas (desativar o *Block Public Access* e criar uma *Bucket Policy*) para se tornarem públicos.
+* **Cultura DevOps:** Fixação da mentalidade de colaboração contínua entre equipes de Desenvolvimento (Dev) e Operações (Ops) para acelerar a entrega de softwares com alta qualidade.
+* **Ferramentas de Automação:** Diferenciação entre o papel do **AWS CodeDeploy** (focado na implantação automatizada de código em ambientes como EC2, Lambda e Fargate) e ferramentas de IaC como o Terraform, compreendendo a importância de nunca alterar manualmente o arquivo de estado (`.tfstate`).
+* **Segurança e Criptografia:** Importância de proteger dados em repouso (KMS) e dados em trânsito (HTTPS/TLS) para blindar credenciais e senhas de usuários contra interceptações na rede.
 
 ---
 
 ## 🚀 Comprovação Prática (Execução)
 
-A stack foi criada e, em seguida, removida com sucesso no ambiente da AWS para seguir as boas práticas de gerenciamento de custos na nuvem.
+Seguindo as boas práticas de DevOps e arquitetura em nuvem, a pilha (*stack*) foi criada com sucesso e, posteriormente, deletada do ambiente para garantir o controle de custos e evitar cobranças desnecessárias na conta AWS.
 
-Abra a imagem abaixo para conferir o status final do laboratório:
+Abaixo está a evidência visual do console da AWS comprovando o ciclo completo do laboratório com o status de sucesso:
 
 ![Status do CloudFormation](./cloudformation-sucesso.png)
 
-*(Nota: Caso sua imagem tenha outro nome, mude o trecho `cloudformation-sucesso.png` exato para o nome do seu arquivo de imagem)*
+---
+
+## 📁 Como este repositório está organizado
+
+* `README.md` - Documentação completa contendo os objetivos, aprendizados e evidência do projeto.
+* `cloudformation-sucesso.png` - Print do console da AWS CloudFormation comprovando a conclusão do desafio com o status `DELETE_COMPLETE`.
+
+---
+💡 **Conecte-se comigo no LinkedIn!** [Nicolas Reis](www.linkedin.com/in/nicolas-reis-86a75a31a)
